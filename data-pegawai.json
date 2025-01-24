@@ -11,14 +11,14 @@
         "PANGKAT": "IV/e",
         "UNIT KERJA": "F Ekonomi",
         "TMT": "1980-03-01",
-        "MASA KERJA": NaN,
+        "MASA KERJA": "#NAME?",
         "RIWAYAT JABATAN": {
             "nm_jabatan": "Ketua Program S3 Ilmu Ekonomi",
             "tmt_sk": NaN,
             "tst_sk": NaN,
             "tgl_mulai": NaN,
             "tgl_selesai": NaN,
-            "jns_jabatan": NaN
+            "jns_jabatan": "STRUKTURAL"
         }
     },
     {
@@ -40,7 +40,7 @@
             "tst_sk": NaN,
             "tgl_mulai": NaN,
             "tgl_selesai": NaN,
-            "jns_jabatan": NaN
+            "jns_jabatan": "STRUKTURAL"
         }
     },
     {
