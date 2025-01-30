@@ -33,6 +33,6 @@ jobs:
       run: |
         git config --global user.email "nurdiyanto7@gmail.com"
         git config --global user.name "boneyanto"
-        git add data-pegawai.json
+        git add data-pegawai.json data-pegawai.xlsx  # Tambahkan file Excel ke staging area
         git commit -m "Update data pegawai dan dosen"
         git push
