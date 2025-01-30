@@ -2,7 +2,7 @@ name: Convert Excel to JSON and Push to GitHub
 
 on:
   schedule:
-    - cron: '0 0 * * 0'  # Jalankan setiap MINGGU pada tengah malam
+    - cron: '0 0 * * *'  # Jalankan setiap hari pada tengah malam
   push:
     branches:
       - main  # Jalankan juga saat ada push ke branch main
@@ -23,7 +23,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pandas openpyxl
+        pip install pandas openpyxl requests
 
     - name: Run Python script
       run: |

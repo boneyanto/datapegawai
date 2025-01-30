@@ -1,10 +1,17 @@
 import pandas as pd
 import json
-import os
+import requests
 
-# Baca file Excel dari URL
-file_url = "https://docs.google.com/spreadsheets/d/1-kKhJJi2QrNnKVJUnbwXAXjmE8PpxuLu/edit?gid=535977766#gid=535977766"
-df = pd.read_excel(file_url)
+# URL untuk mengunduh file Excel dari Google Sheets
+file_url = "https://docs.google.com/spreadsheets/d/1-kKhJJi2QrNnKVJUnbwXAXjmE8PpxuLu/export?format=xlsx&gid=535977766"
+
+# Unduh file Excel
+response = requests.get(file_url)
+with open("data-pegawai.xlsx", "wb") as file:
+    file.write(response.content)
+
+# Baca file Excel
+df = pd.read_excel("data-pegawai.xlsx")
 
 # Convert date columns to string
 date_columns = ['TANGGAL LAHIR', 'tmt_sk', 'tst_sk', 'tgl_mulai', 'tgl_selesai', 'TMT']
